@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -18,19 +18,40 @@ const Navbar = () => {
         <div className='collapse navbar-collapse' id='navbarSupportedContent'>
           <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
             <li className='nav-item'>
-              <Link to='/question' className='nav-link text-dark fw-bold'>
+              <NavLink
+                to='/question'
+                className={({ isActive }) =>
+                  isActive
+                    ? "nav-link text-dark fw-bold text-decoration-underline"
+                    : "nav-link text-dark fw-bold"
+                }
+              >
                 Question
-              </Link>
+              </NavLink>
             </li>
             <li className='nav-item'>
-              <Link to='/section' className='nav-link text-dark fw-bold'>
+              <NavLink
+                to='/section'
+                className={({ isActive }) =>
+                  isActive
+                    ? "nav-link text-dark fw-bold text-decoration-underline"
+                    : "nav-link text-dark fw-bold"
+                }
+              >
                 Section
-              </Link>
+              </NavLink>
             </li>
             <li className='nav-item'>
-              <Link to='/preview' className='nav-link text-dark fw-bold'>
+              <NavLink
+                to='/preview'
+                className={({ isActive }) =>
+                  isActive
+                    ? "nav-link text-dark fw-bold text-decoration-underline"
+                    : "nav-link text-dark fw-bold"
+                }
+              >
                 Preview
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
